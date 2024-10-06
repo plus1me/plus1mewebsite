@@ -1,46 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Rock+Salt&family=Satisfy&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Satisfy&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 <style>
+
     p {
-         font-family: Fertigo, sans-serif;
-       }
+        font-family: "Merienda", cursive;
+      //  font-family: "Rock Salt", cursive;
+        margin-bottom: 20px;
+        margin-left: 100px;
+        color: #123; /* Text color */
+        font-size: 28px; /* Heading size */
+        //  font-family: "Satisfy", cursive;
+        //  font-family: "Shadows Into Light", cursive;
+        //  font-family: Fertigo, sans-serif;
+    }
     h1{
-        font-family:Arial
+        font-family: "Merienda", cursive;
+       // font-family: 'Helvetica Neue', sans-serif;
+        font-size: 4rem;
+        //font-family: Arial, sans-serif;
+        color: #FD6579; /* Romantic color */
+        position: relative;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     }
-    .tab {
-        display: inline-block;
-        margin-left: 200px;
+    .caption-container {
+        margin-left: 80px;
+      //  text-align: center;
+        padding: 20px;
+        max-width: 800px;
+        border-radius: 8px;
+        background-color: #fff;
+       // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for elegance */
     }
-    .tab2 {
-        display: inline-block;
+    .caption-container:hover {
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Slightly more shadow on hover */
+        transform: translateY(-2px); /* Gentle hover effect */
+        transition: all 0.3s ease-in-out; /* Smooth animation */
+    }
+    .floating-image {
+        width: 150px; /* Set width */
+        height: 150px; /* Set height */
+        border-radius: 300px;
+        object-fit: cover;
+        overflow: hidden; /* Ensures image stays within bounds */
+        box-shadow: 0 4px 8px rgba(10, 10, 20, 1.2); /* Shadow effect */
+        transition: transform 0.2s; /* Smooth hover effect */
         margin-left: 800px;
     }
-    img
-          {
-         //   border : 1px solid red ;
-          }
+    .floating-image:hover {
+        transform: scale(1.25); /* Slight zoom on hover */
+    }
+    .floating-image img {
+       
+        width: 100%; /* Makes image fill the container */
+        height: 100%; /* Maintains aspect ratio */
+        object-fit: cover; /* Ensures image covers the entire area */
+    }
+    .scattered-image {
+                position: absolute; /* Positioning images absolutely */
+                width: 250px; /* Set width */
+                height: 250px; /* Set height */
+                border-radius: 300px;
+                overflow: hidden; /* Ensures image stays within bounds */
+                box-shadow: 0 4px 8px rgba(10, 10, 20, 1.2); /* Shadow effect */
+                transition: transform 0.2s; /* Smooth hover effect */
+    }
+    .scattered-image:hover {
+        transform: scale(1.1); /* Slight zoom on hover */
+    }
     </style>
     <title>plus1me</title>
   </head>
   <body>
-<br>
-<br>
-<br>
-<br>
-<br>
+    <br>
+    <br>
+    <br>
+    <div class="caption-container">
+        <h1 >Meet Plus1me! </h1>
+            <p >
+                This space is for finding your Plus One!
+            </p>
+            <p>
+                Coming soon.
+            <p>
+    </div>
 
-  <h1 style="font-size:50px" ><span class="tab"></span>Meet Plus1me!</h1>
-  <p> </p>
-  <p> </p>
-  <p style="font-size:30px" ><span class="tab"></span><span class="tab"></span>This space is for finding your Plus One!</p>
-  <p style="font-size:30px" ><span class="tab"></span><span class="tab"></span>Coming soon.
-  <p>
-  <span class="tab2"></span>
-  <span class="tab2"></span>
-  <img src="hands.png" width="400" height="400"/>
-  </p>
- 
+    <div class="scattered-image" style="top: 50%; left: 60%;">
+        <img src="beach.png" alt="Image 4" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+
+    <div class="scattered-image" style="top: 25%; left: 78%;">
+        <img src="cooking.png" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+      
+    <div class="scattered-image" style="top: 65%; left: 80%;">
+        <img src="fire.png" alt="Image 3" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
   </body>
 </html>
-
