@@ -9,7 +9,7 @@
           <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Shadows+Into+Light&display=swap" rel="stylesheet">
           <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 <style>
-
+  
     p {
         font-family: "Merienda", cursive;
       //  font-family: "Rock Salt", cursive;
@@ -20,6 +20,13 @@
         //  font-family: "Satisfy", cursive;
         //  font-family: "Shadows Into Light", cursive;
         //  font-family: Fertigo, sans-serif;
+    }
+    psmall {
+        font-family: "Merienda", cursive;
+        left: 10px;
+        bottom: 10px;
+        position: absolute;
+        text-decoration: none;color: #FD6579;
     }
     h1{
         font-family: "Merienda", cursive;
@@ -65,21 +72,61 @@
     }
     .scattered-image {
                 position: absolute; /* Positioning images absolutely */
-                width: 250px; /* Set width */
-                height: 250px; /* Set height */
-                border-radius: 300px;
+                width: 450px; /* Set width */
+                height: 300px; /* Set height */
+                border-radius: 200px;
+                object-fit: cover;
                 overflow: hidden; /* Ensures image stays within bounds */
                 box-shadow: 0 4px 8px rgba(10, 10, 20, 1.2); /* Shadow effect */
                 transition: transform 0.2s; /* Smooth hover effect */
     }
     .scattered-image:hover {
-        transform: scale(1.1); /* Slight zoom on hover */
+        transform: scale(1.1);
+    }
+    img {
+     // width: 100px;
+      width: 300px; /* Set width */
+      height: 300px; /* Set height */
+      aspect-ratio: 1;
+      object-fit: cover;
+      --_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+      -webkit-mask-box-image: var(--_m);
+                 mask-border: var(--_m);
+      clip-path: polygon(-41% 0,50% 91%, 141% 0);
+    }
+
+    @supports not (-webkit-mask-box-image: var(--_m)) {
+      img {
+       --_m:
+         radial-gradient(at 70% 31%,var(--c) 29%,#0000 30%),
+         radial-gradient(at 30% 31%,var(--c) 29%,#0000 30%),
+         linear-gradient(#000 0 0) bottom/100% 50% no-repeat;
+       -webkit-mask: var(--_m);
+               mask: var(--_m);
+      }
+    }
+    
+    @supports not (-webkit-mask-box-image: var(--_m)) {
+      img {
+       --_m:
+            radial-gradient(at 70% 31%,var(--c) 29%,#0000 30%),
+            radial-gradient(at 30% 31%,var(--c) 29%,#0000 30%),
+            linear-gradient(#000 0 0) bottom/100% 50% no-repeat;
+          -webkit-mask: var(--_m);
+                  mask: var(--_m);
+      }
     }
     </style>
     <title>plus1me</title>
   </head>
   <body>
-    <br>
+      <a href="about.html" style="right: 170px;top: 10px;position: absolute; text-decoration: none;color: #007bff; " >About</a>
+      <!--
+      <a  style="right: 100px;top: 10px;position: absolute; text-decoration: none;color: #007bff; " >Contact</a>
+      <a  style="right: 50px;top: 10px;position: absolute; text-decoration: none;color: #007bff; " >Help</a>
+   
+      -->
+   <br>
     <br>
     <br>
     <div class="caption-container">
@@ -90,18 +137,13 @@
             <p>
                 Coming soon.
             <p>
-    </div>
 
-    <div class="scattered-image" style="top: 50%; left: 60%;">
-        <img src="beach.png" alt="Image 4" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
+    <img src="beach.jpg" alt="Heart Image" style=" position: absolute;top: 15%; left: 68%;">
 
-    <div class="scattered-image" style="top: 25%; left: 78%;">
-        <img src="cooking.png" style="width: 100%; height: 100%; object-fit: cover;">
-    </div>
-      
-    <div class="scattered-image" style="top: 65%; left: 80%;">
-        <img src="fire.png" alt="Image 3" style="width: 100%; height: 100%; object-fit: cover;">
-    </div>
+    <img src="fire.png" alt="Heart Image" style=" position: absolute;top: 40%; left: 50%;">
+        
+    <img src="couple.jpg" alt="Heart Image" style=" position: absolute;top: 55%; left: 70%;">
+    <psmall >2024</psmall>
   </body>
 </html>
